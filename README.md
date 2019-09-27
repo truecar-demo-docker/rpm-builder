@@ -11,7 +11,7 @@ Once the image is built. You need to mount a volume to download the rpm to your 
 
 ```bash
 mkdir rpm
-docker run --rm -i -v ${PWD}/rpm:/rpm rpm-builder-linux /bin/bash <<COMMANDS
+docker run --rm -i -v ${PWD}/rpm:/rpm rpm-builder /bin/bash <<COMMANDS
 fpm -s dir -t rpm -C /tmp/opencv --name TCOpenCV --version 4.1.0 --iteration 3 --description "opencv 4.1.0" .
 cp TCOpenCV-4.1.0-3.x86_64.rpm /rpm
 COMMANDS
