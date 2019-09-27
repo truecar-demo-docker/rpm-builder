@@ -34,5 +34,3 @@ RUN mkdir -p /build/opencv_source /tmp/opencv \
 
 VOLUME [ "/tmp/fpm" ]
 WORKDIR /tmp/fpm
-
-ENTRYPOINT [ "/usr/local/bin/fpm" ]
